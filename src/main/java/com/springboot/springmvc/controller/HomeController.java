@@ -37,7 +37,7 @@ public class HomeController {
         return "home";
     }
 
-    @RequestMapping("/helloJsp")
+    @RequestMapping(value = "/helloJsp")
     public ModelAndView helloJsp(Map<String, Object> map) {
         map.put("mvcjsp","mvcjsp2");
         return new ModelAndView("hellojsp");
