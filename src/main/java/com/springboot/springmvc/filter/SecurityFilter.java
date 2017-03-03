@@ -7,7 +7,7 @@ import java.io.IOException;
 /**
  * Created by zbz on 2017/2/20.
  */
-@WebFilter(filterName = "securityFilter",urlPatterns = "/*")
+@WebFilter(filterName = "securityFilter",urlPatterns = "/home2/*")
 public class SecurityFilter implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {

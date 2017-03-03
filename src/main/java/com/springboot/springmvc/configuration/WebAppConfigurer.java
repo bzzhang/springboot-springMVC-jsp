@@ -20,9 +20,6 @@ public class WebAppConfigurer extends WebMvcConfigurerAdapter {
         // excludePathPatterns 用户排除拦截
 
         registry.addInterceptor(new TimeInterceptor()).addPathPatterns("/**");
-
-//        registry.addInterceptor(new MyInterceptor2()).addPathPatterns("/**");
-
         super.addInterceptors(registry);
 
     }

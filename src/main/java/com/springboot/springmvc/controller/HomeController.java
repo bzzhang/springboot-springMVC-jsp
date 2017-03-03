@@ -1,4 +1,5 @@
 package com.springboot.springmvc.controller;
+import com.springboot.springmvc.entity.Account;
 import com.springboot.springmvc.service.HomeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -27,11 +28,13 @@ public class HomeController {
     @ResponseBody
     String home() {
         String result=homeService.hello();
+        homeService.findById();
         return result;
     }
 
     @GetMapping("/index")
     public String index(Map<String, Object> model) {
+
         model.put("time", new Date());
         model.put("message", "hello model1");
         return "home";
